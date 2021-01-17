@@ -114,19 +114,6 @@ game.setScore(200)
 開關4 = false
 開關5 = false
 basic.forever(function () {
-    if (開關1) {
-        for (let index = 0; index < randint(31, 33); index++) {
-            basic.pause(40)
-            第一個.change(LedSpriteProperty.Y, 1)
-            if (第一個.get(LedSpriteProperty.Y) == 4) {
-                basic.pause(40)
-                第一個.set(LedSpriteProperty.Y, 1)
-            }
-        }
-        開關1 = false
-    }
-})
-basic.forever(function () {
     if (開關2) {
         for (let index = 0; index < randint(34, 36); index++) {
             basic.pause(45)
@@ -137,6 +124,19 @@ basic.forever(function () {
             }
         }
         開關2 = false
+    }
+})
+basic.forever(function () {
+    if (開關1) {
+        for (let index = 0; index < randint(31, 33); index++) {
+            basic.pause(40)
+            第一個.change(LedSpriteProperty.Y, 1)
+            if (第一個.get(LedSpriteProperty.Y) == 4) {
+                basic.pause(40)
+                第一個.set(LedSpriteProperty.Y, 1)
+            }
+        }
+        開關1 = false
     }
 })
 basic.forever(function () {
